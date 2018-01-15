@@ -33,12 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use Dotenv for storing config data
-gem 'dotenv-rails', groups: [:development, :test]
-
 # Use Stream for the whole point of us being here.
 gem 'stream_rails'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +42,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  # Use Dotenv for storing config data
+  gem 'dotenv-rails'
+
 end
 
 group :development do

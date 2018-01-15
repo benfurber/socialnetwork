@@ -1,5 +1,4 @@
 require 'stream_rails'
-require 'dotenv'
 
 StreamRails.configure do |config|
   config.api_key      = ENV['STREAM_KEY']
