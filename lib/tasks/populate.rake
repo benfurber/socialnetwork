@@ -18,7 +18,6 @@ namespace :fill do
     User.populate 20 do |user|
       user.name = Faker::Name.name
       user.email = Faker::Internet.email
-      user.sex = genders
       user.dob = Faker::Date.between(45.years.ago, 15.years.ago)
       user.phone_number = Faker::PhoneNumber.cell_phone
       user.encrypted_password = User.new(password: password).encrypted_password
@@ -29,10 +28,9 @@ namespace :fill do
     end
 
 
-    user = User.new(name: 'Rails', email: 'test@socify.com', sex: 'female', password: 'password')
+    user = User.new(name: 'Ben', email: 'ben@test.com', password: 'password')
     user.skip_confirmation!
     user.save!
-    puts 'Created test user with email=test@socify.com and password=password'
 
     puts 'Generate Friendly id slug for users'
     puts '==================================='

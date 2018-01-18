@@ -27,6 +27,10 @@
           <%= f.text_area :about, placeholder: 'About', class: 'form-control' %>
         </div>
         <div class="form-group">
+          <%= f.label :help_type %>
+          <%= f.text_area :help_type, placeholder: 'Can give help/needs help/its complicated', class: 'form-control' %>
+        </div>
+        <div class="form-group">
           <%= f.label :location %>
           <%= f.text_field :location, placeholder: 'Location', class: 'form-control' %>
         </div>
@@ -37,10 +41,6 @@
         <div class="form-group">
           <%= f.label :dob %>
           <%= f.text_field :dob, placeholder: 'Date of Birth', class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :sex %><br>
-          <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
         </div>
         <div class="actions">
           <%= submit_tag 'Update', class: 'btn btn-primary' %>

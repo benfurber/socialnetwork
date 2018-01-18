@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20170613183247) do
     t.text     "content",                     null: false
     t.integer  "user_id"
     t.string   "attachment"
+    t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "cached_votes_up", default: 0
@@ -147,6 +148,7 @@ ActiveRecord::Schema.define(version: 20170613183247) do
     t.string   "email",                  default: "",     null: false
     t.string   "encrypted_password",     default: "",     null: false
     t.string   "about"
+    t.string   "help_type"
     t.string   "avatar"
     t.string   "cover"
     t.string   "reset_password_token"
@@ -162,7 +164,6 @@ ActiveRecord::Schema.define(version: 20170613183247) do
     t.datetime "confirmation_sent_at"
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
-    t.string   "sex",                    default: "male", null: false
     t.string   "location"
     t.date     "dob"
     t.string   "phone_number"
