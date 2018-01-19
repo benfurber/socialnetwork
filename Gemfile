@@ -22,6 +22,10 @@ gem 'font-awesome-rails'
 
 gem 'nokogiri'
 
+# PostgresSQL database
+# This was in production only but I think it's worth just getting use to it locally too
+gem 'pg', '~> 0.18'
+
 group :development do
   gem 'spring'
   gem 'better_errors'
@@ -33,11 +37,9 @@ end
 
 group :development, :test do
   gem 'puma'
-  gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg'
   gem 'unicorn'
   gem 'rails_12factor'
   gem 'fog'
