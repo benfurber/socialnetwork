@@ -20,15 +20,19 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
+# Required for many gems, called directly to get the most recent version
 gem 'nokogiri'
 
 # PostgresSQL database
 # This was in production only but I think it's worth just getting use to it locally too
 gem 'pg', '~> 0.18'
 
+# Pushed out of the development only group while I get use to getting Heroku to work
+gem 'better_errors'
+
+
 group :development do
   gem 'spring'
-  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'letter_opener'
   gem 'guard'

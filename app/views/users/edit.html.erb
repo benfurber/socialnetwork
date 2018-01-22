@@ -27,8 +27,31 @@
           <%= f.text_area :about, placeholder: 'About', class: 'form-control' %>
         </div>
         <div class="form-group">
-          <%= f.label :help_type %>
-          <%= f.text_area :help_type, placeholder: 'Can give help/needs help/its complicated', class: 'form-control' %>
+          <div class="row">
+            <div class="col-sm-12">
+              <h4>Need a hand?</h4>
+              <p>The community is here to support each other.</p>
+            </div>
+            <div class="col-sm-12">
+              <%= f.label :help_type_need do %>
+                <%= f.radio_button :help_type, 'need' %>
+                <%= 'I need a hand' %>
+              <% end %>
+            </div>
+            <div class="col-sm-12">
+              <%= f.label :help_type_give do %>
+                <%= f.radio_button :help_type, 'give' %>
+                <%= 'I can give a hand' %>
+              <% end %>
+            </div>
+            <div class="col-sm-12">
+              <%= f.label :help_type_both do %>
+                <%= f.radio_button :help_type, 'both' %>
+                <%= 'Both!' %>
+              <% end %>
+            </div>
+          <!-- <%= f.text_area :help_type, placeholder: 'Can give help/needs help/its complicated', class: 'form-control' %> -->
+          </div>
         </div>
         <div class="form-group">
           <%= f.label :location %>
