@@ -1,10 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
+
+$header-font: 'Just Me Again Down Here', cursive;
+
+$font-stack: 'Open Sans', sans-serif;
 
 body {
   padding-top: 100px;
   background: $bg-color;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $font-stack;
 }
 
 h1,
@@ -13,12 +16,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $header-font;
 }
 
+$nav-img: image-url('nav-bg.jpg');
 .navbar {
   border: none;
-  background-color: $navbar-color;
+  background: $nav-img repeat $navbar-color;
 }
 
 .navbar-brand {
@@ -27,7 +31,7 @@ h6 {
 
 .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-  font-family: 'Montserrat';
+  font-family: $header-font;
   color: white !important;
 
   &:hover {
@@ -75,7 +79,7 @@ h6 {
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $header-font;
   padding: 10px 20px;
 }
 
