@@ -5,7 +5,7 @@ $header-font: 'Just Me Again Down Here', cursive;
 $font-stack: 'Open Sans', sans-serif;
 
 body {
-  padding-top: 100px;
+  padding-top: 60px;
   background: $bg-color;
   font-family: $font-stack;
 }
@@ -19,28 +19,33 @@ h6 {
   font-family: $header-font;
 }
 
+a {
+  color: $primary-colour;
+  text-decoration: underline;
+}
+
 $nav-img: image-url('nav-bg.jpg');
 .navbar {
-  border: none;
+  border-bottom: 5px solid white;
   background: $nav-img repeat $navbar-color;
 }
 
 .navbar-brand {
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   font-family: $header-font;
   color: white !important;
+  font-size: 2em;
 
   &:hover {
-    color: $bg-color !important;
+    color: white !important;
   };
 }
 
 .avatar {
-  border: 1px solid $border-color;
   width: 50px;
   height: 50px;
 }
@@ -54,9 +59,8 @@ $nav-img: image-url('nav-bg.jpg');
 }
 
 .activity {
-  background: white;
-  border: 1px solid $border-color;
-  border-radius: 3px;
+  background: $white-bg-style;
+  border-radius: 5px;
   padding: 10px;
   margin: 10px;
 }
@@ -104,10 +108,10 @@ input[type="password"],
 input[type="text"],
 textarea {
   box-shadow: none !important;
-  border: 2px solid #ccc !important;
+  border: 0;
 
   &:focus {
-    border: 2px solid #888 !important;
+    border: 0;
   };
 }
 
@@ -199,4 +203,24 @@ p {
 
 .dropdown-menu > li > a {
   padding: 10px 30px;
+}
+
+#main-container {
+  background: $white-bg-style;
+  padding: 2em;
+}
+
+.wells {
+  border: 0;
+}
+
+#post-content {
+  border: 5px solid #999;
+  border-radius: 5px;
+  font-size: 2em;
+  font-family: $header-font;
+  color: $primary-colour;
+}
+#post-content:hover {
+  border-color: $primary-colour;
 }

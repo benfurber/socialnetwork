@@ -1,12 +1,16 @@
 // Font stuff
 
-$default-font-size: 1.5rem;
-$small-font-size: 1.25rem;
+$default-font-size: 1.8rem;
+$small-font-size: 1.3rem;
 
 // Colour stuff
 
-$navbar-color: #2f065b;
+$primary-colour: #2f065b;
+
+$navbar-color: $primary-colour;
 $border-color: #ccc;
 $liked-color: #D3103E;
-$bg-color: #f0f0f0;
+$bg-color: rgba(252,251,227,1);
 $light-text-color: #808080;
+
+$white-bg-style: rgba(255, 255, 255, 0.8);
