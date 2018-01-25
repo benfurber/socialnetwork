@@ -2,7 +2,7 @@
   <div id="mentionable-data" data-content="<%= mentionable_user_path(current_user) %>"></div>
   <%= form_for @post, html: { class: 'post_form' } do |f| %>
     <div class="form-group">
-      <span>Status update</span>
+      <h4>Status update</h4>
       <div id="post-content" contenteditable="true" class="editable form-control input-mentionable" placeholder="Inspire us"></div>
       <%= f.hidden_field :content, value: @post.content, class: 'form-control input-mentionable', autofocus: true %>
     </div>
@@ -13,10 +13,10 @@
       <%= f.file_field :attachment %>
     </div>
     <div class="form-group">
-      <a id="post-attachment" href="javascript:void(0);" class="pull-right btn btn-primary">
+      <%= f.submit 'Post', class: 'btn btn-primary'%>
+      <a id="post-attachment" href="javascript:void(0);" class="btn btn-info">
         <%= fa_icon 'image' %>
       </a>
-      <%= f.submit 'Post', class: 'btn btn-primary'%>
     </div>
     <% if @post.attachment.present? %>
       <div class="attachment">

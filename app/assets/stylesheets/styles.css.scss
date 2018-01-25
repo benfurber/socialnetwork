@@ -12,10 +12,7 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-family: $header-font;
 }
 
@@ -25,6 +22,7 @@ a {
 }
 
 $nav-img: image-url('nav-bg.jpg');
+
 .navbar {
   border-bottom: 5px solid white;
   background: $nav-img repeat $navbar-color;
@@ -215,12 +213,21 @@ p {
 }
 
 #post-content {
-  border: 5px solid #999;
+  border: 5px rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
   border-radius: 5px;
   font-size: 2em;
   font-family: $header-font;
   color: $primary-colour;
 }
-#post-content:hover {
-  border-color: $primary-colour;
+  #post-content:hover,
+  #post-content:active {
+    color: white;
+    border-color: $primary-colour;
+    background: $primary-colour;
+  }
+
+
+img.avatar {
+  border-radius: 100%;
 }

@@ -9,7 +9,6 @@
   </h5>
   <% if @user.dob.present? %>
     <h5>
-      <%= fa_icon @user.sex %>
       <%= "#{pluralize(age(@user.dob), 'year')} old" %>
     </h5>
   <% end %>
