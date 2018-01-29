@@ -56,11 +56,43 @@ $nav-img: image-url('nav-bg.jpg');
   background-position: center;
 }
 
-.activity {
+%activity-box-atributes {
   background: $white-bg-style;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px;
+  margin: 0 0 30px 0;
+  box-shadow: $drop-shadow-style;
+  border-left: solid 5px;
+}
+
+.activity-comment {
+  @extend %activity-box-atributes;
+  border-color: #500;
+}
+.activity-post {
+  @extend %activity-box-atributes;
+  border-color: #050;
+}
+.activity-follow {
+  @extend %activity-box-atributes;
+  border-color: #005;
+}
+.activity-event {
+  @extend %activity-box-atributes;
+  border-color: #055;
+}
+
+.col-avatar {
+  display: flex;
+}
+.col-avatar a {
+  vertical-align: middle;
+  display: table-cell;
+}
+.col-avatar img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: $drop-shadow-style;
 }
 
 .name {
